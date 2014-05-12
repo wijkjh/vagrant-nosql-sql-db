@@ -13,5 +13,9 @@ PATH=$PATH:$HOME/bin:/bin:/usr/local/bin:/usr/bin:/bin:<%= @kvHome %>/bin
 export KVHOME
 export PATH
 
+KVROOT=$KVHOME/kvroot
+export KVROOT
+
 alias kvclient="java -Xmx256m -Xms256m -jar $KVHOME/lib/kvclient.jar"
-alias kvadmin="java -Xmx256m -Xms256m -jar $KVHOME/lib/kvstore.jar runadmin"
+alias kvstore="java -Xmx256m -Xms256m -jar $KVHOME/lib/kvstore.jar"
+alias jps="/usr/java/jdk1.7.0_45/bin/jps"

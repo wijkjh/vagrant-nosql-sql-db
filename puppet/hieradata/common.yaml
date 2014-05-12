@@ -4,7 +4,7 @@ messageEnv:     'common'
 
 hosts:
   'nosql-sql-db.local':
-    ip:                "10.10.10.5"
+    ip:                "10.10.0.10"
   'localhost':
     ip:                "127.0.0.1"
     host_aliases:      - 'localhost.localdomain'

@@ -166,7 +166,7 @@ class oraclenosql {
   }
 
   exec { "makebootconfig":
-    command => "java -jar ${installkvdir}/${kv_version}/lib/kvstore.jar makebootconfig -root ${installkvdir}/${kv_version}/kvroot -host localhost -port 5000 -admin 5001 -harange 5010,5025 -store-security none -capacity 1 -storagedir ${installkvdir}/${kv_version}/data",
+    command => "java -Xmx256m -Xms256m -jar ${$installkvdir}/${$kv_version}/lib/kvstore.jar makebootconfig -root ${$installkvdir}/${$kv_version}/kvroot -host nosql-sql-db.local -port 5000 -admin 5001 -harange 5010,5025 -store-security none -capacity 1 -storagedir ${$installkvdir}/${$kv_version}/data",
     cwd     => $installkvdir,
     group   => users,
     user    => $workshop_user,
