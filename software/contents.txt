@@ -1,0 +1,3 @@
+Put any software which is to be installed during provision in this folder or change your download folder in the approriate files:
+* Vagrantfile
+* puppet/hieradata/nosql-sql-db.local.yaml

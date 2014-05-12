@@ -1,0 +1,17 @@
+# .bash_profile
+
+# Get the aliases and functions
+if [ -f ~/.bashrc ]; then
+        . ~/.bashrc
+fi
+
+# User specific environment and startup programs
+
+KVHOME=<%= @kvHome %>
+PATH=$PATH:$HOME/bin:/bin:/usr/local/bin:/usr/bin:/bin:<%= @kvHome %>/bin
+
+export KVHOME
+export PATH
+
+alias kvclient="java -Xmx256m -Xms256m -jar $KVHOME/lib/kvclient.jar"
+alias kvadmin="java -Xmx256m -Xms256m -jar $KVHOME/lib/kvstore.jar runadmin"

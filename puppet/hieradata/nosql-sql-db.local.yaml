@@ -1,0 +1,12 @@
+messageEnv: 'nosql-sql-db'
+
+#workshop user
+workshop_os_user:       "workshop"
+workshop_os_user_pwd:   "$1$cAO3CO8J$fV3/gJ6Bkmz6/LZleBepl1"
+
+download_dir:           &downloadDir   "/data/install"
+source_path:            &sourcePath    "/software"
+
+kv_install_file:        "kv-ce-3.0.5.tar.gz"
+kv_install_dir:         "/var/kv"
+kv_version:             "kv-3.0.5"

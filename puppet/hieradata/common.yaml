@@ -1,0 +1,13 @@
+messageDefault: 'default'
+messageEnv:     'common'
+
+
+hosts:
+  'nosql-sql-db.local':
+    ip:                "10.10.10.5"
+  'localhost':
+    ip:                "127.0.0.1"
+    host_aliases:      - 'localhost.localdomain'
+                       - 'localhost4'
+                       - 'localhost4.localdomain4'
+
