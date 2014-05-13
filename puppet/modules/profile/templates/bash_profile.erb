@@ -6,16 +6,18 @@ if [ -f ~/.bashrc ]; then
 fi
 
 # User specific environment and startup programs
+JAVA_HOME=/usr/java/jdk1.7.0_45/bin
+export JAVA_HOME
 
 KVHOME=<%= @kvHome %>
-PATH=$PATH:$HOME/bin:/bin:/usr/local/bin:/usr/bin:/bin:<%= @kvHome %>/bin
+PATH=$PATH:$HOME/bin:/bin:/usr/local/bin:/usr/bin:/bin:<%= @kvHome %>/bin:$JAVA_HOME
 
 export KVHOME
 export PATH
 
-KVROOT=$KVHOME/kvroot
-export KVROOT
+#KVROOT=$KVHOME/kvroot
+#export KVROOT
 
 alias kvclient="java -Xmx256m -Xms256m -jar $KVHOME/lib/kvclient.jar"
 alias kvstore="java -Xmx256m -Xms256m -jar $KVHOME/lib/kvstore.jar"
-alias jps="/usr/java/jdk1.7.0_45/bin/jps"
+alias jps="$JAVA_HOME/jps"
